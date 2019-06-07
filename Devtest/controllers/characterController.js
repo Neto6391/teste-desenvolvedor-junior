@@ -1,3 +1,4 @@
-exports.get = function(req, res, next) {
+//
+export function getCharacters(req, res, next) {
 	res.render("index", { title: "Expresss" });
-};
+}
