@@ -26,5 +26,11 @@ export function getCharacters(req, res, next) {
 	);
 	const filterCharacterData = filterCharacters(characterData);
 
-	res.render("index", { title: "Expresss" });
+	res.render("index", {
+		title: "Personagens",
+		characters: filterCharacterData,
+		episodeCounterSeasonOne: 0,
+		episodeCounterSeasonTwo: 0,
+		episodeCounterSeasonThree: 0
+	});
 }
