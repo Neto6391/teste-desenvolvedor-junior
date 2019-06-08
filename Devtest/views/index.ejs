@@ -1,47 +1,39 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title><%= title %></title>
-		<link rel="stylesheet" href="/stylesheets/style.css" />
-	</head>
-	<body>
-		<h1><%= title %></h1>
-		<% characters.forEach(function(character) { %> <img src=<%= character.image
-		%> />
+<%- include('header') -%>
 
-		<h2><%= character.name %></h2>
+<h1><%= title %></h1>
+<% characters.forEach(function(character) { %> <img src=<%= character.image %>
+/>
 
-		<p>Visto por Último: <%= character.location.name %></p>
+<h2><%= character.name %></h2>
 
-		<p>
-			Gênero: <%= (character.gender != 'Female') ? 'Masculino' : 'Feminino' %>
-		</p>
+<p>Visto por Último: <%= character.location.name %></p>
 
-		<% character.episode.forEach(function(episode, index) { %> <%
-		if(parseInt(episode.substr(40, episode.length)) <= 11 ) { %> <%
-		episodeCounterSeasonOne++ %> <% } %> <% if(parseInt(episode.substr(40,
-		episode.length)) >= 11 && parseInt(episode.substr(40, episode.length)) <= 20
-		) { %> <% episodeCounterSeasonTwo++ %> <% } %> <%
-		if(parseInt(episode.substr(40, episode.length)) > 20 &&
-		parseInt(episode.substr(40, episode.length)) < 31 ) { %> <%
-		episodeCounterSeasonThree++ %> <% } %> <% }); %> <%
-		if(episodeCounterSeasonOne > 0) { %>
+<p>
+	Gênero: <%= (character.gender != 'Female') ? 'Masculino' : 'Feminino' %>
+</p>
 
-		<p>Aparições na 1° temporada: <%= episodeCounterSeasonOne %></p>
+<% character.episode.forEach(function(episode, index) { %> <%
+if(parseInt(episode.substr(40, episode.length)) <= 11 ) { %> <%
+episodeCounterSeasonOne++ %> <% } %> <% if(parseInt(episode.substr(40,
+episode.length)) >= 11 && parseInt(episode.substr(40, episode.length)) <= 20 ) {
+%> <% episodeCounterSeasonTwo++ %> <% } %> <% if(parseInt(episode.substr(40,
+episode.length)) > 20 && parseInt(episode.substr(40, episode.length)) < 31 ) {
+%> <% episodeCounterSeasonThree++ %> <% } %> <% }); %> <%
+if(episodeCounterSeasonOne > 0) { %>
 
-		<% episodeCounterSeasonOne = 0 %> <% } if(episodeCounterSeasonTwo > 0) { %>
+<p>Aparições na 1° temporada: <%= episodeCounterSeasonOne %></p>
 
-		<p>Aparições na 2° temporada: <%= episodeCounterSeasonTwo %></p>
+<% episodeCounterSeasonOne = 0 %> <% } if(episodeCounterSeasonTwo > 0) { %>
 
-		<% episodeCounterSeasonTwo = 0 %> <% } if(episodeCounterSeasonThree > 0) {
-		%>
+<p>Aparições na 2° temporada: <%= episodeCounterSeasonTwo %></p>
 
-		<p>Aparições na 3° temporada: <%= episodeCounterSeasonThree %></p>
+<% episodeCounterSeasonTwo = 0 %> <% } if(episodeCounterSeasonThree > 0) { %>
 
-		<% episodeCounterSeasonThree = 0 %> <% } %>
+<p>Aparições na 3° temporada: <%= episodeCounterSeasonThree %></p>
 
-		<p>Aparições no total: <%= character.episode.length %></p>
-		<p>Status: <%= character.status === 'Alive' ? 'Vivo' : 'Morto' %></p>
-		<% }); %>
-	</body>
-</html>
+<% episodeCounterSeasonThree = 0 %> <% } %>
+
+<p>Aparições no total: <%= character.episode.length %></p>
+<p>Status: <%= character.status === 'Alive' ? 'Vivo' : 'Morto' %></p>
+
+<% }); %> <%- include('footer') -%>
