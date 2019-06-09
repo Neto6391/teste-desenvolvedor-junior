@@ -22,7 +22,7 @@ Irá ser avaliado: Seu conhecimento técnico, sua habilidade para resolver probl
 
 # Instruções de Execução do Projeto
 
-- Abrir Terminal no diretório do projeto raiz e executar o comando 'cd Devtest'.
+- Abrir Terminal e navegar até a raiz da pasta Devtest.
 - Digitar o comando 'npm install'.
 - Digitar o comando, para executar o projeto em modo de desenvolvimento 'npm run dev'.
 - Link do projeto em execução com o Servidor aberto 'http://localhost:3000'.
