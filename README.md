@@ -20,6 +20,12 @@ Ao finalizar, deve ser feito um PR (pull request) para este repositório contend
 
 Irá ser avaliado: Seu conhecimento técnico, sua habilidade para resolver problemas de forma simples e eficiente e boas práticas de código.
 
+# Instruções de Execução do Projeto
+
+- Abrir Terminal no diretório do projeto raiz e executar o comando 'cd Devtest'.
+- Digitar o comando 'npm install'.
+- Digitar o comando, para executar o projeto em modo de desenvolvimento 'npm run dev'.
+
 # Exemplo
 
 Quanto ao design fique livre para criar, no entanto todos os dados devem ser exibidos conforme é mostrado no seguinte exemplo:
