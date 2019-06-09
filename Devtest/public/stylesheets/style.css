@@ -1,8 +1,31 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+h5 {
+	font-size: 16px;
 }
 
-a {
-  color: #00B7FF;
+p {
+	font-size: 13.5px;
+}
+
+h1.margin-text {
+	margin-top: 1%;
+	font-size: 2rem;
+}
+
+div.row-margin {
+	margin-left: 10%;
+}
+
+div.card-block {
+	margin-bottom: 1.5%;
+	margin-top: 5px;
+}
+
+div.card-space-width {
+	width: 18rem;
+	padding: 2.5%;
+}
+
+div.card-space-body {
+	margin-left: -9%;
+	margin-top: -2%;
 }
